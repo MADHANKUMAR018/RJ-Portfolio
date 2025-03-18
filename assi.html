@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASSIGNMENTS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ASSETS/style.css">
+    <style>
+        body {
+            font-family: 'Robo', sans-serif;
+            background-color: #eef1f7;
+            color: #333;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+           
+            color: #1d1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            color: rgb(33, 32, 32);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            color: #ff6600;
+        }
+        .carousel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            item-align-center;             }
+        .list {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 10px;
+            scroll-behavior: smooth;
+        }
+        .item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            min-width: 320px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .item:hover {
+            transform: scale(1.07);
+            box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+        }
+        .item img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .arrows {
+            margin-top: 20px;
+        }
+        .arrows button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: none;
+            cursor: pointer;
+            background: #ff6600;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .arrows button:hover {
+            background: #e65c00;
+        }
+        .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+.item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    min-width: 320px;
+    max-width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto; /* Ensures center alignment */
+}
+.item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 0 auto 15px auto; /* Centers image */
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="name">MADHAN KUMAR R</div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="assignments.html" class="active">ASSIGNMENTS</a>
+            <a href="contact .html">CONTACT</a>
+        </nav>
+    </header>
+    
+    <div class="carousel">
+        
+            
+            <div class="item">
+                <img src="ASSETS/images/Screenshot 2025-03-12 204536.png" alt="Fusion 360">
+                <div class="introduce">
+                    <div class="title">3D Modelling</div>
+                    <div class="topic">Fusion 360</div>
+                    <div class="des">
+                        Create 3D models of various object and Learn How to use Fusion 360.
+                    </div>
+                    <button class="seeMore">SEE MORE</button>
+                </div>
+            </div>
+      
+    
+    <script>
+        document.getElementById("prev").addEventListener("click", function() {
+            document.querySelector(".list").scrollBy({ left: -320, behavior: "smooth" });
+        });
+        document.getElementById("next").addEventListener("click", function() {
+            document.querySelector(".list").scrollBy({ left: 320, behavior: "smooth" });
+        });
+        document.querySelectorAll(".seeMore").forEach(button => {
+            button.addEventListener("click", function() {
+                alert("More details coming soon!");
+            });
+        });
+    </script>
+</body>
+</html>
